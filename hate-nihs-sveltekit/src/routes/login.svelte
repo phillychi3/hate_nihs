@@ -17,6 +17,7 @@
   {#await getdata}
     <p>loading image</p>
   {:then outdata}
+    <!-- svelte-ignore a11y-img-redundant-alt -->
     <img src={outdata[0].url} alt="Dog image" />
   {/await}
 </main>
