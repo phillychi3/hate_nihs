@@ -6,14 +6,10 @@
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    Dropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
+    NavLink
   } from "sveltestrap";
 
-  let isOpen = false;
+  let isOpen = true;
 
   function handleUpdate(event) {
     isOpen = event.detail.isOpen;
