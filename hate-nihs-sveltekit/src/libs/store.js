@@ -10,10 +10,19 @@ const repos = readable({
 
     response.then(data => {
         currentController = null;
-        set({
-            status: 'success',
-            data: data.data
-        });
+        try {
+            set({
+                status: 'success',
+                data: data.data
+            });
+        }
+        catch (err) {
+            set({
+                status: 'error',
+                data: false
+            });
+        }
+
     }
     )}
     
