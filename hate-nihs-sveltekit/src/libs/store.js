@@ -9,7 +9,6 @@ const repos = readable({
     const response = requests_data()
 
     response.then(data => {
-        currentController = null;
         try {
             set({
                 status: 'success',

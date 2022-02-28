@@ -12,11 +12,9 @@
   function getdata() {
     var datas = get(repos);
     var items = datas.data;
-    if (items === false) {
+    if (items == false) {
       items = ["error"];
     } else {
-      
-
       paginatedItems = paginate({ items, pageSize, currentPage });
     }
     return items;

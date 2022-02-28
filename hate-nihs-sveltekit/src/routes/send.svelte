@@ -5,6 +5,8 @@
     let inner;
     let name
     let content
+    let verify01 = "5L2g5piv5pm66Zqc5ZeO"
+    let verify02 = "6YKE5oOz56C06Kej6Zi/"
     const resize = () => {
       inner.style.height = 'auto';
       inner.style.height = 4 + inner.scrollHeight + 'px';
@@ -16,7 +18,9 @@
         method: 'POST',
         body: JSON.stringify({
           name,
-          content
+          content,
+          verify01,
+          verify02
         })
       })
       const json = await res.json()
@@ -69,6 +73,7 @@
           
           <Label for="content">想說甚麼?</Label>
           <Label for="content">今天我想要說...</Label>
+          <Label for="content">我看到了什麼...</Label>
         </Typewriter>
         
         <Input
