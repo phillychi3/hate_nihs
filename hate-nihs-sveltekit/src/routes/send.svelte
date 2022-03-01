@@ -14,7 +14,7 @@
 
     async function doPost () {
 
-      const res = await fetch('http://127.0.0.1:5500/api/message/postdata', {
+      const res = await fetch('https://hatenihs.herokuapp.com/api/message/postdata', {
         method: 'POST',
         body: JSON.stringify({
           name,
