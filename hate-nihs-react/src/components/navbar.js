@@ -1,12 +1,8 @@
 import React from 'react';
 import {
  Navbar,
- Nav,
- NavDropdown,
- Form,
- FormControl,
- Button,
-} from "react-bootstrap";//導入需要的component
+ Nav
+} from "react-bootstrap";
 
 
 export default function Isnavbar() {
@@ -16,7 +12,7 @@ export default function Isnavbar() {
         <Navbar.Brand href="#home">
         <img
             alt=""
-            src="../images/icon.svg"
+            src="icon.svg"
             width="30"
             height="30"
             className="d-inline-block align-top"
@@ -29,14 +25,6 @@ export default function Isnavbar() {
             <Nav className="mr-auto">
             <Nav.Link href="#link">發文</Nav.Link>
             <Nav.Link href="#link">github</Nav.Link>
-            <Nav.Link href="#link">登入</Nav.Link>
-            {/* <NavDropdown title="more" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-            </NavDropdown> */}
             </Nav>
 
         </Navbar.Collapse>
