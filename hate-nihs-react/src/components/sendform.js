@@ -41,12 +41,11 @@ export default function Isform() {
             body: JSON.stringify(jdata)
         })
         .then(res => res.json())
-        .then(data => {
+        .then(data => {            
             alert.success("發送成功");
         })
         .catch(err => {
             alert.error("未知錯誤");
-            console.log(err)
         })
     }
 
@@ -72,7 +71,7 @@ export default function Isform() {
             onError={() => {
                 console.log('Login Failed');
             }}
-            useOneTap
+
             />
             </GoogleOAuthProvider>
         </Form>

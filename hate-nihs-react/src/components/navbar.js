@@ -24,7 +24,7 @@ export default function Isnavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
             <Nav.Link href="#link">發文</Nav.Link>
-            <Nav.Link href="#link">github</Nav.Link>
+            <Nav.Link href="https://github.com/phillychi3/hate_nihs">github</Nav.Link>
             </Nav>
 
         </Navbar.Collapse>
