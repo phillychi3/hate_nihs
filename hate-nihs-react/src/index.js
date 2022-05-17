@@ -6,6 +6,7 @@ import Sform from "./components/sendform";
 import 'bootstrap/dist/css/bootstrap.css';
 import { positions, Provider ,transitions} from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+import './css/index.css';
 
 const options = {
   timeout: 5000,
@@ -14,14 +15,20 @@ const options = {
   transition: transitions.FADE
 };
 
+
+
 ReactDOM.render(
+
+
   <React.StrictMode>
     <div class="all">
       <Up />
-      <div class="form">
-      <Provider template={AlertTemplate} {...options}>
-        <Sform />
-      </Provider>
+      <div class="background">
+        <div class="form">
+          <Provider template={AlertTemplate} {...options}>
+            <Sform />
+          </Provider>
+        </div>
       </div>
     </div>
   </React.StrictMode>,
