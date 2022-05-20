@@ -32,9 +32,9 @@ export default function Isform() {
             console.log("error");
             return;
         }
-        alert.success("發送中 請不要離開");
+        alert.info("發送中 請不要離開");
         var jdata = {'jwt': thing, 'name':formData.data , "content": formData2.data};
-        fetch('http://phillychi3.ml:7414/api/test/login', {
+        fetch('https://phillychi3.ml/nihs/api/test/login', {
             method: 'POST',
             headers:  new Headers({
                 'Content-Type': 'application/json'
@@ -43,7 +43,15 @@ export default function Isform() {
         })
         .then(res => res.json())
         .then(data => {            
-            alert.success("發送成功");
+            if(data.status === "success"){
+                alert.success("發送成功");
+            }else if(data.code === "403"){
+                alert.error("沒有權限");
+            }else{
+                alert.error("發送失敗 未知錯誤");
+            }
+                
+            
         })
         .catch(err => {
             alert.error("未知錯誤");
@@ -56,7 +64,7 @@ export default function Isform() {
         <GoogleOAuthProvider clientId="133157627833-551a92ekvsubhjh1arabm6hn16sjjlpl.apps.googleusercontent.com">
 
         <p>1.請使用學校帳號登入</p>
-        <p>2.文章內禁止出現任何完整性名 <br></br>範例:王小名 王xx</p>
+        <p>2.文章內禁止出現任何完整性名 <br></br>王小名 請轉換為 王xx</p>
         <p>3.禁止出現-政治-辱罵-毀謗等行為 違者將移除使用權</p>
         <p>4.匿名系統不會蒐集任何非發文者資料</p>
         <p>5.若您按下面那個登入按鈕 及代表您同意本網站政策</p>
